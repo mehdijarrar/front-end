@@ -1,74 +1,50 @@
 
 <section>
- <div class="d-flex justify-content-center">
   <div class="container">
-    
-      
-       <div class="aa-myaccount-area"> 
-            
-           <div class="row align-items-center justify-content-center">
-             <div class="col-md-6 col-md-offset-3">
-              <div class="aa-myaccount-login">
+    <div class="row">
+      <div class="col-md-12">
+       <div class="aa-myaccount-area">         
+           <div class="row">
+             <div class="col-md-6">
+               <div class="aa-myaccount-login">
                 <h4>Login</h4>
-                <form
-                *ngIf="!isLoggedIn"
-                name="form"
-                (ngSubmit)="f.form.valid && onSubmit()"
-                #f="ngForm"
-                novalidate
-                class="aa-login-form"
-              >
-                 
+                 <form  class="aa-login-form"  *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate  >
                   <label for="">Username <span>*</span></label>
-                   <input type="text"
-                   placeholder="Username"
-                   name="username"
-                   [(ngModel)]="form.username"
-                   required
-                   #username="ngModel">
-                   <div class="text-danger" *ngIf="username.errors && f.submitted">
-                    <div *ngIf="username.errors.required">Username is required</div>
-                    
-                  </div>
-                   <label for="">Password<span>*</span></label>
-                    <input type="password"
-                   
-                    placeholder="Password"
-                    name="password"
-                    [(ngModel)]="form.password"
-                    required
-                    minlength="6"
-                    #password="ngModel">
-                    <div class="text-danger" *ngIf="password.errors && f.submitted">
-                      <div *ngIf="password.errors.required">Password is required</div>
-                      <div *ngIf="password.errors.minlength">
-                        Password must be at least 6 characters
-                      </div>
-                    </div>
-                    
-                    <button type="submit" class="aa-browse-btn">Login</button>
-                  
-                    <div class="form-group">
-                    <div
-                                class="alert alert-danger"
-                                role="alert"
-                                *ngIf="f.submitted && isLoginFailed"
-                              >
-                                Login failed: {{ errorMessage }}
-                              </div>
-                            </div>
-                    <label class="rememberme" for="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
-                    <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
-                  </form>
-              </div>
-            </div>
+        <input type="text" placeholder="Username" name="username" [(ngModel)]="form.username" required #username="ngModel">
+          <div class="text-danger" *ngIf="username.errors && f.submitted">
+                <div *ngIf="username.errors.required">
+                  Username is required
+                </div> 
+          </div>
           
-           
+          <label for="">Password<span>*</span></label>
+          <input type="password" placeholder="Password" name="password" [(ngModel)]="form.password" required minlength="6" #password="ngModel">
+             <div class="text-danger" *ngIf="password.errors && f.submitted">
+                 <div *ngIf="password.errors.required">Password is required</div>
+                   <div *ngIf="password.errors.minlength"> Password must be at least 6 characters </div>
+             </div>
+         
+         <button type="submit" class="aa-browse-btn">Login</button>
+       
+         <div class="form-group">
+            <div class="alert alert-danger" role="alert" *ngIf="f.submitted && isLoginFailed" >
+                        Login failed: {{ errorMessage }}
+            </div>
+         </div>
+         
+         <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
+                  </form>
+
+               </div>
+             </div>
+           </div>
+       </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>  
 
-
-
-</section>
+     
+ 
+ 
+ 
+ </section>
