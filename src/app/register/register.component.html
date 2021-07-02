@@ -1,0 +1,79 @@
+<section>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+     <div class="aa-myaccount-area">         
+         <div class="row">
+           <div class="col-md-6 col-md-offset-3">
+             <div class="aa-myaccount-register">                 
+              <h4>Registration Info</h4>
+              <form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate class="aa-login-form">
+                 <label for="">Username<span>*</span></label>
+                 <input type="text" placeholder="Username" name="username" [(ngModel)]="form.username" required minlength="3" maxlength="20" #username="ngModel">
+                 <div class="text-danger" *ngIf="username.errors && f.submitted">
+                  <div *ngIf="username.errors.required">Username is required</div>
+                  <div *ngIf="username.errors.minlength">
+                    Username must be at least 3 characters
+                  </div>
+                  <div *ngIf="username.errors.maxlength">
+                    Username must be at most 20 characters
+                  </div>
+                </div>
+                <label for="">Email<span>*</span></label>
+                <input
+                type="text"
+                placeholder="Email"
+                
+                name="email"
+                [(ngModel)]="form.email"
+                required
+                email
+                #email="ngModel"
+              />
+              <div class="text-danger" *ngIf="email.errors && f.submitted">
+                <div *ngIf="email.errors.required">Email is required</div>
+                <div *ngIf="email.errors.email">
+                  Email must be a valid email address
+                </div>
+              </div>
+              <label for="">Phone Number<span>*</span></label>
+              <input
+                        type="text"
+                        placeholder="Phone Number"
+                        name="phone"
+                        [(ngModel)]="form.phone"
+                        required
+                        phone
+                        #phone="ngModel"
+                      />
+                      <div class="text-danger" *ngIf="phone.errors  && f.submitted">
+                        <div *ngIf="phone.errors.required">phone is required</div>
+                        
+                      </div>
+                 <label for="">Password<span>*</span></label>
+                 <input
+                        type="password"
+                        
+                        placeholder="Password"
+                        name="password"
+                        [(ngModel)]="form.password"
+                        required
+                        minlength="6"
+                        #password="ngModel"
+                      />
+                      <div class="text-danger" *ngIf="password.errors && f.submitted">
+                        <div *ngIf="password.errors.required">Password is required</div>
+                        <div *ngIf="password.errors.minlength">
+                          Password must be at least 6 characters
+                        </div>
+                      </div>
+                 <button type="submit" class="aa-browse-btn">Register</button>                    
+               </form>
+             </div>
+           </div>
+         </div>          
+      </div>
+    </div>
+  </div>
+</div>
+</section>

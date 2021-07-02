@@ -27,9 +27,35 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/assets/template/css/theme-color/default-theme.css",
+              "src/assets/template/css/font-awesome.css",
+              "src/assets/template/css/jquery.simpleLens.css",
+              "src/assets/template/css/jquery.smartmenus.bootstrap.css",
+              "src/assets/template/css/nouislider.css",
+              "src/assets/template/css/sequence-theme.modern-slide-in.css",
+              "src/assets/template/css/slick.css",
+              "src/assets/template/css/style.css"
+
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+             
+              
+            
+              "src/assets/template/js/slick.js" ,
+              "src/assets/template/js/custom.js" , 
+              "src/assets/template/js/jquery.simpleGallery.js" , 
+              "src/assets/template/js/jquery.simpleLens.js" , 
+              "src/assets/template/js/jquery.smartmenus.bootstrap.js" , 
+              "src/assets/template/js/jquery.smartmenus.js" , 
+              "src/assets/template/js/nouislider.js" , 
+              "src/assets/template/js/sequence.js" , 
+              "src/assets/template/js/sequence-theme.modern-slide-in.js" 
+            ]
           },
           "configurations": {
             "production": {
